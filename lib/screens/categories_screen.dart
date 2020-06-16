@@ -7,9 +7,17 @@ class CategoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Vamos cozinhar'),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'Vamos cozinhar?',
+            ),
+          ],
+        ),
       ),
       body: GridView(
+        padding: const EdgeInsets.all(25),
         // Sliver -> Área com scroll
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 200,
