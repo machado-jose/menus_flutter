@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-enum Complexity{
+enum Complexity {
   Simple,
   Medium,
   Difficult,
 }
 
-enum Cost{
+enum Cost {
   Cheap,
   Fair,
   Expensive,
@@ -42,4 +42,30 @@ class Meal {
     @required this.complexity,
     @required this.cost,
   });
+
+  String get complexityText {
+    switch (this.complexity) {
+      case Complexity.Simple:
+        return 'Simples';
+      case Complexity.Medium:
+        return 'Médio';
+      case Complexity.Difficult:
+        return 'Difícil';
+      default:
+        return 'Desconhecida';
+    }
+  }
+
+  String get costText {
+    switch (this.cost) {
+      case Cost.Cheap:
+        return 'Barato';
+      case Cost.Fair:
+        return 'Justo';
+      case Cost.Expensive:
+        return 'Caro';
+      default:
+        return 'Desconhecido';
+    }
+  }
 }
